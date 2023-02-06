@@ -21,7 +21,7 @@ public class DocumentController {
     }
 
     @DeleteMapping("/clients/{clientId}/documents/{documentId}")
-    public ResponseEntity<String> saveDocument(@PathVariable Long clientId, @PathVariable Long documentId) {
+    public ResponseEntity<String> deleteDocument(@PathVariable Long clientId, @PathVariable Long documentId) {
         documentService.deleteDocument(documentId);
         return new ResponseEntity<>("Succesfully deleted document", HttpStatusCode.valueOf(204));
     }
