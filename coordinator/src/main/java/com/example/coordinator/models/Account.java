@@ -1,25 +1,31 @@
 package com.example.coordinator.models;
 
-import jakarta.persistence.*;
+
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import lombok.ToString;
 
-
-@Getter
-@Setter
 @Entity
 @NoArgsConstructor
-@ToString
+@AllArgsConstructor
+@Getter
+@Setter
 public class Account {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(unique = true)
-    private String email;
+    private String username;
     private String password;
-    private String role;
-
+    @Enumerated(EnumType.STRING)
+    private Role role;
 }
