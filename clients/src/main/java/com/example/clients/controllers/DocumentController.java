@@ -5,6 +5,7 @@ import com.example.clients.models.dtos.ClientDto;
 import com.example.clients.services.DocumentService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatusCode;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,7 +15,7 @@ public class DocumentController {
 
     private final DocumentService documentService;
 
-    @PostMapping("/clients/{clientId}/documents")
+    @PostMapping(value  = "/clients/{clientId}/documents",  consumes = {MediaType.APPLICATION_JSON_VALUE})
     public Document saveDocument(@PathVariable Long clientId, @RequestBody Document document) {
         document.setClientId(clientId);
         return documentService.saveDocument(document);

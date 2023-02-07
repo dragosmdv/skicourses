@@ -46,7 +46,6 @@ public class TokenUtils {
             username = decodedJWT.getSubject();
             log.info("Successfully extracted username from token: {}", username);
         }
-        log.info("Failed to extract username from token");
         return username;
     }
 
@@ -69,7 +68,6 @@ public class TokenUtils {
             log.info("Successfully extracted authorities from token: {}", authorities.stream()
                     .findFirst());
         }
-        log.info("Failed to extract authorities from token");
         return authorities;
     }
 
