@@ -8,6 +8,7 @@ import java.util.Collections;
 
 @RestController
 @RequestMapping("/clients")
+@CrossOrigin(origins = "http://localhost:3000")
 public class ClientsController {
 
     @GetMapping("/{userId}")
