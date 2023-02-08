@@ -1,9 +1,10 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import "./Login.css";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import UserService from '../../service/UserService'
 import Alert from "react-bootstrap/Alert";
+import AboutWrapper from "remote/AboutWrapper"
 
 function Login() {
 
@@ -50,6 +51,11 @@ function Login() {
       }, 2000);
     }
 
+    const divRef = useRef(null);
+
+    useEffect(() =>{
+        AboutWrapper(divRef,current)
+    },[])
 
 
   return (
