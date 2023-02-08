@@ -1,22 +1,27 @@
 package com.example.coordinator.controllers;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
-
-import java.util.Collections;
 
 @RestController
 @RequestMapping("/clients")
 @CrossOrigin(origins = "http://localhost:3000")
 public class ClientsController {
 
+    @Value("${clients.api.url}")
+    private String clientsApiUrl;
+
+    @Value("${courses.api.url}")
+    private String coursesApiUrl;
+
     @GetMapping("/{userId}")
     public String getClientByUserId(@PathVariable Long userId) {
         System.out.println("Making request for client by id in ClientAPI");
         RestTemplate restTemplate = new RestTemplate();
         String fooResourceUrl
-                = "http://localhost:8082/clients/" + userId;
+                = clientsApiUrl + "/clients/" + userId;
         ResponseEntity<String> response
                 = restTemplate.getForEntity(fooResourceUrl, String.class);
         return response.getBody();
@@ -26,13 +31,13 @@ public class ClientsController {
     public String saveDocument(@PathVariable Long clientId, @RequestBody String document) {
         System.out.println("Making request for saving documents in ClientAPI");
         RestTemplate restTemplate = new RestTemplate();
-        HttpHeaders headers=new HttpHeaders();
+        HttpHeaders headers = new HttpHeaders();
         headers.set("Content-Type", "application/json");
-        HttpEntity<String> request = new HttpEntity<>(document,headers);
+        HttpEntity<String> request = new HttpEntity<>(document, headers);
         String fooResourceUrl
-                = "http://localhost:8082/clients/" + clientId + "/documents";
+                = clientsApiUrl + "/clients/" + clientId + "/documents";
         ResponseEntity<String> response
-                = restTemplate.postForEntity(fooResourceUrl,request, String.class);
+                = restTemplate.postForEntity(fooResourceUrl, request, String.class);
         return response.getBody();
     }
 
@@ -41,7 +46,7 @@ public class ClientsController {
         System.out.println("Making request for saving documents in ClientAPI");
         RestTemplate restTemplate = new RestTemplate();
         String fooResourceUrl
-                = "http://localhost:8082/clients/" + clientId + "/documents/" + documentId;
+                = clientsApiUrl + "/clients/" + clientId + "/documents/" + documentId;
         restTemplate.delete(fooResourceUrl);
         return new ResponseEntity<>("Succesfully deleted document", HttpStatus.ACCEPTED);
     }
@@ -52,7 +57,7 @@ public class ClientsController {
         System.out.println("Making request for courses by id in CoursesAPI");
         RestTemplate restTemplate = new RestTemplate();
         String fooResourceUrl
-                = "http://localhost:8083/courses";
+                = coursesApiUrl + "/courses";
         ResponseEntity<String> response
                 = restTemplate.getForEntity(fooResourceUrl, String.class);
         return response.getBody();

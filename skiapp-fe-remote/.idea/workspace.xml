@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68e8bcc6-0c78-44ba-b52b-7a202a22ab7e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../coordinator/src/main/java/com/example/coordinator/configs/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/../coordinator/src/main/java/com/example/coordinator/configs/SecurityConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clients/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../coordinator/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../courses/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../courses/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coordinator/src/main/java/com/example/coordinator/controllers/ClientsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../coordinator/src/main/java/com/example/coordinator/controllers/ClientsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coordinator/src/main/java/com/example/coordinator/controllers/VersionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../coordinator/src/main/java/com/example/coordinator/controllers/VersionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coordinator/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../coordinator/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../courses/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../courses/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

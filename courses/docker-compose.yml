@@ -1,0 +1,72 @@
+version: '3.8'
+
+services:
+  mysqldb_courses:
+    image: mysql:5.7
+    container_name: mysql_courses
+    restart: unless-stopped
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=courses_db
+    ports:
+      - 9306:3306
+    volumes:
+      - db:/var/lib/mysql
+
+  app_courses:
+    image: dragosmdv/coursesapi
+    container_name: coursesapi
+    expose:
+      - 9083
+    ports:
+      - 9083:8083
+    restart: unless-stopped
+    depends_on:
+      - mysqldb_courses
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql_courses:3306/courses_db
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=password
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+    hostname: coursesApi
+
+  app_clients:
+    image: dragosmdv/clientsapi
+    container_name: clientsapi
+    expose:
+      - 9082
+    ports:
+      - 9082:8082
+    restart: unless-stopped
+    depends_on:
+      - mysqldb_courses
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql_courses:3306/clients_db?createDatabaseIfNotExist=true
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=password
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+    hostname: clientsApi
+
+
+  app_coordinator:
+    image: dragosmdv/coordinatorapi
+    container_name: coordinatorapi
+    expose:
+      - 9081
+    ports:
+      - 9081:8081
+    restart: unless-stopped
+    depends_on:
+      - mysqldb_courses
+      - app_clients
+      - app_courses
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql_courses:3306/coordinator_db?createDatabaseIfNotExist=true
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=password
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+      - CLIENTS_API_URL=http://clientsApi:8082
+      - COURSES_API_URL=http://coursesApi:8083
+
+volumes:
+  db:
