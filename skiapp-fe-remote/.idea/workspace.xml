@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68e8bcc6-0c78-44ba-b52b-7a202a22ab7e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../skiapp-fe-host/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../skiapp-fe-host/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../skiapp-fe-host/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../skiapp-fe-host/.idea/skiapp-fe-host.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../skiapp-fe-host/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/skiapp-fe-remote.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Counter.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../skiapp-fe/webpack.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../skiapp-fe/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../skiapp-fe/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../skiapp-fe/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../skiapp-fe/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../skiapp-fe/src/pages/login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../skiapp-fe/src/pages/login/Login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coordinator/src/main/java/com/example/coordinator/configs/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/../coordinator/src/main/java/com/example/coordinator/configs/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +62,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1675878872181</updated>
-      <workItem from="1675878873752" duration="1897000" />
+      <workItem from="1675878873752" duration="2512000" />
     </task>
     <servers />
   </component>

@@ -56,10 +56,12 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .permitAll();
         http.authorizeRequests()
                 .antMatchers("/clients/**")
-                .hasAnyAuthority("CUSTOMER","ADMIN");
+                .permitAll();
+//                .hasAnyAuthority("CUSTOMER","ADMIN");
         http.authorizeRequests()
                 .antMatchers("/admin/**")
-                .hasAnyAuthority("ADMIN");
+                .permitAll();
+//                .hasAnyAuthority("ADMIN");
         http.addFilter(new CustomAuthenticationFilter(tokenUtils, authenticationManagerBean(), accountRepository));
         http.addFilterBefore(new CustomAuthorizationFilter(tokenUtils), UsernamePasswordAuthenticationFilter.class);
     }
