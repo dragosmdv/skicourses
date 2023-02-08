@@ -9,7 +9,7 @@ public class WeatherApiService {
 
     private final String apiKey = "a3c7747bb0cd2dcf9bdfb06cbfab83ff";
 
-    private final String weatherUrl = "https://api.openweathermap.org/data/2.5/weather?lat=%s&lon=%s&appid=%s";
+    private final String weatherUrl = "https://api.openweathermap.org/data/2.5/weather?lat=%s&lon=%s&units=metric&appid=%s";
 
     public String getWeatherForCoordinates(String lat, String lon) {
         String finalUrl = String.format(weatherUrl, lat, lon, apiKey);

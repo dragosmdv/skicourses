@@ -1,6 +1,6 @@
 {
   "name": "skiapp-fe-host",
-  "version": "1.0.0",
+  "version": "8.19.3",
   "scripts": {
     "build": "webpack --mode production",
     "build:dev": "webpack --mode development",
@@ -31,8 +31,11 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.13.10",
+    "@material-ui/core": "^4.12.4",
+    "native": "^0.3.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-native-web": "^0.18.12",
     "react-router-dom": "^6.8.1",
     "remote": "^0.2.6"
   }
