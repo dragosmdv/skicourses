@@ -39,7 +39,7 @@ module.exports = {
       name: "container",
       filename: "remoteEntry.js",
       remotes: {
-        counter: "counter@http://localhost:3002/remoteEntry.js",
+        about: "about@http://localhost:3002/remoteEntry.js",
       },
       exposes: {},
       shared: {

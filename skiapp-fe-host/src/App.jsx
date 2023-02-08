@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
-import { Counter } from 'counter/Counter';
+import { About } from 'about/About';
 import "./index.css";
 
 const App = () => (
@@ -14,7 +14,7 @@ const App = () => (
         <a  href='/about'>About the app</a>
         <Router>
             <Routes>
-                <Route path="/about" element={<Counter/>}/>
+                <Route path="/about" element={<About/>}/>
             </Routes>
         </Router>
     </div>

@@ -36,11 +36,11 @@ module.exports = {
   },
   plugins: [ // This is important part
     new ModuleFederationPlugin({
-      name: "counter",
+      name: "about",
       filename: "remoteEntry.js",
       remotes: {},
       exposes: {
-        "./Counter": "./src/components/Counter",
+        "./About": "./src/components/About",
       },
       shared: {
         ...deps,
