@@ -4,8 +4,7 @@
 Introducing SkiCourseFinder. This web application makes it easy for ski and snowboarding enthusiasts to search for courses and lessons in their area, view details, and contact instructors directly. The app also allows users to upload and store their ski-related documents, such as rental agreements, lift tickets, and insurance information, in one secure and convenient place. With SkiCourseFinder, users can plan their ski trips with ease and have all their important information in one place.
 
 ## System Context diagram
-![System Context diagram](https://user-images.githubusercontent.com/52666207/217680105-959191ca-1968-4ec5-a131-aa4da6455360.png)
-
+![Untitled Diagram-Page-1 drawio](https://user-images.githubusercontent.com/52666207/217804248-18b75559-c18a-4500-aeda-769c21c2d0ca.png)
 
 ## Container diagram
 ![Container Diagram](https://user-images.githubusercontent.com/52666207/217680294-ac4b806d-07c5-4116-b9f4-65c5e08b8856.jpg)
