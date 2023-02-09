@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68e8bcc6-0c78-44ba-b52b-7a202a22ab7e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../skiapp-fe-host/src/Home.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../skiapp-fe-host/src/pages/courses/CourseList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../clients/src/main/java/com/example/clients/services/WeatherApiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../clients/src/main/java/com/example/clients/services/WeatherApiService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../skiapp-fe-host/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../skiapp-fe-host/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../skiapp-fe-host/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../skiapp-fe-host/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../skiapp-fe-host/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../skiapp-fe-host/src/App.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
