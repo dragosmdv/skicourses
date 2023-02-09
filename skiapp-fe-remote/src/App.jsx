@@ -5,7 +5,7 @@ import "./index.css";
 
 const App = () => (
   <div className="container">
-    <div>Name: skiapp-fe-remote</div>
+    <div>Name: skiapp-fe-remote for ABOUT component</div>
     <div>Framework: react</div>
     <div>Language: JavaScript</div>
     <div>CSS: Empty CSS</div>
