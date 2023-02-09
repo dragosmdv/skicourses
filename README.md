@@ -26,3 +26,33 @@ This is an app.
 - manages ski/snowboarding courses
 
 ![courses_db](https://user-images.githubusercontent.com/52666207/217680524-4060e727-9564-4a3b-8872-5e0b10e6dc25.png)
+
+
+# Used Patterns:
+
+## Database per service
+Using a database per service has the following benefits:
+
+- Helps ensure that the services are loosely coupled. Changes to one service’s database does not impact any other services.
+
+- Each service can use the type of database that is best suited to its needs. For example, a service that does text searches could use ElasticSearch. A service that manipulates a social graph could use Neo4j.
+
+Using a database per service has the following drawbacks:
+
+- Implementing business transactions that span multiple services is not straightforward. Distributed transactions are best avoided because of the CAP theorem. Moreover, many modern (NoSQL) databases don’t support them.
+
+- Implementing queries that join data that is now in multiple databases is challenging.
+
+- Complexity of managing multiple SQL and NoSQL databases
+
+## API Gateway and Access token
+The API gateway handles requests in one of two ways. Some requests are simply proxied/routed to the appropriate service. It handles other requests by fanning out to multiple services.
+
+The API gateway is the single entry point for client requests. It authenticates requests, and forwards them to other services, which might in turn invoke other services.
+This pattern has the following benefits:
+- The identity of the requestor is securely passed around the system
+- Services can verify that the requestor is authorized to perform an operation
+
+
+## Decompose by subdomain
+The microservice architecture structures an application as a set of loosely coupled services. The goal of the microservice architecture is to accelerate software development by enabling continuous delivery/deployment.
